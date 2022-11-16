@@ -14,13 +14,10 @@
     "baseUrl": ".",
     "types": [
       "webpack-env",
-      "jest"
+      "jest",
+      "element-plus/global"
     ],
-    "paths": {
-      "@/*": [
-        "src/*"
-      ]
-    },
+
     "lib": [
       "esnext",
       "dom",
@@ -28,14 +25,18 @@
       "scripthost"
     ]
   },
+  "allowJs": true,
   "include": [
     "src/**/*.ts",
     "src/**/*.tsx",
     "src/**/*.vue",
     "tests/**/*.ts",
     "tests/**/*.tsx"
-  ],
+, "src/index.ts", "src/index.ts", "src/components/index.ts", "src/components/index.ts"  ],
   "exclude": [
-    "node_modules"
-  ]
+    "node_modules",
+  ],
+    "paths": {
+      "@/*": ["./src/*", "./*"]
+    }
 }

@@ -1,17 +1,28 @@
 {
-  "name": "vue3-btn",
+  "name": "vue3-btn-littlekekeroxx",
   "version": "0.1.0",
-  "private": true,
+  "main": "dist/vue3-btn-littlekekeroxx.common.js",
+  "module": "dist/vue3-btn-littlekekeroxx.umd.min.js",
+  "author": "Ryme",
+  "description": "## Project setup ``` npm install ```",
+  "files": [
+    "dist/*.{js,css}"
+  ],
+  "private": false,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "build": "npm run build:lib && npm run build:style",
     "test:unit": "vue-cli-service test:unit",
     "test:e2e": "vue-cli-service test:e2e",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "build:lib": "vue-cli-service build --target lib --name vue3-btn-littlekekeroxx src/index.ts",
+    "build:style": "dist/vue3-btn-littlekekeroxx.css"
   },
   "dependencies": {
     "core-js": "^3.8.3",
-    "vue": "^3.2.13",
+    "element-plus": "^2.2.21",
+    "postcss": "^8.4.19",
+    "vue": "^3.2.20",
     "vue-router": "^4.0.3",
     "vuex": "^4.0.0"
   },
@@ -38,6 +49,8 @@
     "sass": "^1.32.7",
     "sass-loader": "^12.0.0",
     "ts-jest": "^27.0.4",
-    "typescript": "~4.5.5"
+    "typescript": "~4.5.5",
+    "unplugin-auto-import": "^0.11.4",
+    "unplugin-vue-components": "^0.22.9"
   }
 }

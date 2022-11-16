@@ -1,5 +1,13 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
+  <div>
+    <VueButton :rounded="true" color="red" size="large" @click="arnaud" />
   </div>
 </template>
+
+<script setup lang="ts">
+import VueButton from "@/components/VueButton.vue";
+
+const arnaud = (): void => console.log('click');
+
+</script>
+
